@@ -1,0 +1,60 @@
+/* Same styling as previous version */
+:root{
+  --bg:#f3f5f8;--paper:#fff;--ink:#0f172a;--muted:#475569;
+  --sidebar:#16324a;--sidebar-2:#0f273a;--line:rgba(15,23,42,.12);
+  --soft:rgba(15,23,42,.06);--radius:18px}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg)}
+.page{width:min(1100px,94vw);margin:28px auto;background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 50px rgba(2,8,23,.18);display:grid;grid-template-columns:340px 1fr}
+.sidebar{background:linear-gradient(180deg,var(--sidebar),var(--sidebar-2));color:#e8f0f7;padding:28px 22px}
+.photo-block{display:grid;justify-items:center;gap:10px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:18px}
+.avatar-img{width:112px;height:112px;border-radius:999px;object-fit:cover;border:2px solid rgba(255,255,255,.18)}
+.sidebar-name{font-weight:800;margin:0;font-size:16px}
+.sidebar-role{margin:0;font-size:13px;opacity:.9}
+.side-section{margin-top:18px}
+.side-title{font-size:13px;letter-spacing:.28em;text-transform:uppercase;margin:0 0 12px}
+.side-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.side-item{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:13px}
+.sidebar a{color:#e8f0f7;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.35)}
+.edu{padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
+.edu-year{margin:0;font-size:12px}
+.edu-school{margin:4px 0 0;font-weight:700;font-size:13px}
+.edu-detail{margin:4px 0 0;font-size:12.5px}
+.content{padding:34px}
+.name{margin:0;font-size:44px;font-weight:900;letter-spacing:.04em}
+.headline{margin-top:10px;color:var(--muted);font-weight:600}
+.block{margin-top:22px}
+.block-head{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;margin-bottom:12px}
+.block h2{margin:0;font-size:14px;letter-spacing:.34em;text-transform:uppercase}
+.rule{height:2px;background:var(--line)}
+.para{margin:0;font-size:14px;line-height:1.65}
+.project{padding:14px 0;border-top:1px solid var(--soft)}
+.project-top{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:6px}
+.project-title{margin:0;font-size:15px;font-weight:800}
+.project-date{font-size:12.5px}
+.skills-grid{display:grid;gap:14px}
+.skill-group{border:1px solid var(--soft);border-radius:14px;padding:14px;background:rgba(15,23,42,.02)}
+.skill-group-title{margin:0 0 8px;font-size:14px;font-weight:800}
+.skill-line{margin:0;color:var(--muted);font-size:13.5px}
+.muted{color:var(--muted)}
+@media(max-width:900px){.page{grid-template-columns:1fr}.name{font-size:34px}.project-top{grid-template-columns:1fr}}
+
+
+/* ===== Sidebar alignment fix (v6) ===== */
+.photo-block {
+  justify-items: start;
+  text-align: left;
+}
+
+.sidebar-name,
+.sidebar-role {
+  text-align: left;
+}
+
+.avatar-img {
+  margin-left: 0;
+}
+
+.side-section {
+  text-align: left;
+}
